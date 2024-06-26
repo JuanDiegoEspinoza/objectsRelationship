@@ -38,5 +38,5 @@ if st.button('Read'):
 
     
     root = listNodesObjets[listNodesNames.index('V01_CPT_RESULTS')]
-    render.RenderTree(root).by_attr()
-    st.write(render.RenderTree(root).by_attr())
+    exporter = JsonExporter(indent=2, sort_keys=True)
+    print(exporter.export(root))
