@@ -36,6 +36,6 @@ if st.button('Read'):
         listNodesNames +=[childName]
         listNodesObjets+= [newChildNode]
         i+=1
-    root = listNodesObjets[1]
+    root = listNodesObjets[2]
     render.RenderTree(root).by_attr()
     st.write(render.RenderTree(root).by_attr())
