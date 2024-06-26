@@ -8,5 +8,5 @@ uploadedFile = st.file_uploader("Choose")
 x = pd.read_csv(uploadedFile)
 
 if st.button('Read'):
-    for row in df.rows:
+    for row in x:
         print(row['REFERENCING_OBJECT_NAME'], row['REFERENCED_OBJECT_NAME'])
