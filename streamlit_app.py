@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 
 
-uploadedFile = st.file_uploader()
+uploadedFile = st.file_uploader("Choose")
 
 x = pd.read_excel(uploadedFile)
 
