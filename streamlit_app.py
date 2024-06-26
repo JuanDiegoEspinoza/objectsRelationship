@@ -37,3 +37,4 @@ if st.button('Read'):
         i+=1
     root = listNodesObjets[1]
     render.RenderTree(root).by_attr()
+    st.write(render.RenderTree(root).by_attr())
