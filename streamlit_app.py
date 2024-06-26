@@ -35,4 +35,4 @@ if st.button('Read'):
         listNodesNames +=[childName]
         listNodesObjets+= [newChildNode]
         i+=1
-    st.write(listNodesObjets[0])
+    st.write(listNodesObjets[1])
