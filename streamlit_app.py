@@ -5,7 +5,7 @@ from anytree import Node, RenderTree
 from anytree.exporter import UniqueDotExporter
 
 
-uploadedFile = st.file_uploader("Choose")
+uploadedFile = st.file_uploader("Choose file")
 
 x = pd.read_csv(uploadedFile)
 listNodesNames = []
