@@ -11,6 +11,6 @@ if st.button('Read'):
     i = 0
     while i < len(x):
         x[i]
-        st.write(x[i])
-        st.write(x[i]['ob1'])
+        st.write(x.iloc[i])
+        st.write(x.iloc[i]['ob1'])
         i+=1
