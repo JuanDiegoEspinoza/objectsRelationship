@@ -8,5 +8,9 @@ uploadedFile = st.file_uploader("Choose")
 x = pd.read_csv(uploadedFile)
 
 if st.button('Read'):
-    for row in x:
-        st.write(row)
+    i = 0
+    while i < x.len:
+        row[i]
+        st.write(row[i])
+        st.write(row[i]['ob1'])
+        i+=1
