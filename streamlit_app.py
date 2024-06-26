@@ -39,4 +39,4 @@ if st.button('Read'):
         i+=1
     root = listNodesObjets[listNodesNames.index('V01_CPT_RESULTS')]
     exporter = JsonExporter(indent=2, sort_keys=True)
-    print(exporter.export(root))
+    st.write(exporter.export(root))
