@@ -40,4 +40,4 @@ if st.button('Read'):
     #root = listNodesObjets[listNodesNames.index('V01_CPT_RESULTS')]
     #exporter = JsonExporter(indent=2, sort_keys=True)
     #st.write(exporter.export(root))
-    st.write(listNodesObjets[listNodesNames.index('V01_CPT_RESULTS')])
+    st.write(listNodesObjets[listNodesNames.index('V01_LEX_TRANS_VOLUME')])
