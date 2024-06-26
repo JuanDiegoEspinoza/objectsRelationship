@@ -9,7 +9,7 @@ x = pd.read_csv(uploadedFile)
 
 if st.button('Read'):
     i = 0
-    while i < x.len:
+    while i < len(x):
         row[i]
         st.write(row[i])
         st.write(row[i]['ob1'])
