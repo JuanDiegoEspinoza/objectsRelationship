@@ -4,7 +4,7 @@ import streamlit as st
 from anytree import Node, RenderTree
 from anytree.exporter import UniqueDotExporter
 from anytree import Node, render
-from anytree.exporter import JsonExporter
+from anytree.exporter import JsonExporter 
 
 
 uploadedFile = st.file_uploader("Choose file")
