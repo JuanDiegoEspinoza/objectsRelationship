@@ -35,4 +35,5 @@ if st.button('Read'):
         listNodesNames +=[childName]
         listNodesObjets+= [newChildNode]
         i+=1
-    st.write(listNodesObjets[1])
+    udo = st.write(listNodesObjets[1])
+    UniqueDotExporter(udo).to_picture("udo.png")
