@@ -35,7 +35,5 @@ if st.button('Read'):
         listNodesNames +=[childName]
         listNodesObjets+= [newChildNode]
         i+=1
-    dan = listNodesObjets[1]
-    UniqueDotExporter(dan,
-                  nodeattrfunc=lambda node: "fixedsize=true, width=1, height=1, shape=diamond",
-                  edgeattrfunc=lambda parent, child: "style=bold").to_picture("dan.png")
+    root = listNodesObjets[1]
+    render.RenderTree(root).by_attr()
