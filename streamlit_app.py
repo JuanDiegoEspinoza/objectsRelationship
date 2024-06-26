@@ -4,4 +4,4 @@ import pandas as pd
 import streamlit as st
 
 test = st.file_uploader('the notice you want to tell')
-st.write(test)
+df1=pd.read_excel(test)
