@@ -4,7 +4,7 @@ import streamlit as st
 
 test = st.file_uploader('the notice you want to tell')
 
-x = pd.read_excel(test)
+pd.read_excel(test)
 
 if st.button('Read'):
     st.write(x)
