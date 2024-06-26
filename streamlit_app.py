@@ -5,7 +5,7 @@ import streamlit as st
 
 uploadedFile = st.file_uploader("Choose")
 
-x = pd.read_excel(uploadedFile)
+x = pd.read_csv(uploadedFile)
 
 if st.button('Read'):
     st.write(x)
