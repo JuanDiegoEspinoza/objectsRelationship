@@ -9,4 +9,4 @@ x = pd.read_csv(uploadedFile)
 
 if st.button('Read'):
     for row in x:
-        st.write(row['ob1'])
+        st.write(row)
