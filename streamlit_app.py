@@ -3,6 +3,7 @@ import pandas as pd
 import streamlit as st
 from anytree import Node, RenderTree
 from anytree.exporter import UniqueDotExporter
+from anytree import Node, render
 
 
 uploadedFile = st.file_uploader("Choose file")
