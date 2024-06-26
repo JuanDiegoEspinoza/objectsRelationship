@@ -31,7 +31,7 @@ if st.button('Read'):
         #    newChildNode = listNodesObjets[listNodesNames.index(childName)]
         #    childFlag = 1         
         
-        newChildNode = Node(newParentNode, childName)
+        newChildNode = Node(childName, parent=newParentNode)
         listNodesNames +=[childName]
         listNodesObjets+= [newChildNode]
         i+=1
