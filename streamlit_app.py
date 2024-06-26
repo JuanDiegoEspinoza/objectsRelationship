@@ -3,4 +3,5 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-st.file_uploader('the notice you want to tell')
+test = st.file_uploader('the notice you want to tell')
+st.write(test)
