@@ -46,7 +46,7 @@ if st.button('Read'):
         if i.is_root:
             i.parent = grandParentNode
 
-    root = listNodesObjets[listNodesNames.index("GPP")]
+    root = grandParentNode
     exporter = JsonExporter(indent=2, sort_keys=True)
     st.write(exporter.export(root))
 
