@@ -42,11 +42,6 @@ if st.button('Read'):
     #exporter = JsonExporter(indent=2, sort_keys=True)
     #st.write(exporter.export(root))
 
-    for i in listNodesObjets:
-        i_str = str(i)
-        cont = i_str.count('/')
-        if cont==1:
-            i = Node(i, parent=GPP_Node)
-
-    exporter = JsonExporter(indent=2, sort_keys=True)
-    st.json(exporter.export("V01_GPP_METRICS"))
+    i = "V01_GPP_METRICS"
+    if (i in listNodesNames):
+        st.write("Node exists")
