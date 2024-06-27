@@ -13,7 +13,7 @@ uploadedFile = st.file_uploader("Choose file")
 x = pd.read_csv(uploadedFile)
 listNodesNames = []
 listNodesObjets = []
-GPP_Node = Node('GPP')
+GPP_Node = Node("GPP")
 
 listNodesObjets += GPP_Node
 listNodesNames += 'GPP'
