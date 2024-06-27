@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-from anytree import Node, RenderTree
+from anytree import Node, RenderTree, render
 from anytree.exporter import UniqueDotExporter
 from anytree import Node, render
 from anytree import AnyNode
