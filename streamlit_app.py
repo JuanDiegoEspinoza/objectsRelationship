@@ -46,6 +46,6 @@ if st.button('Read'):
         cont = i_str.count('/')
         st.write(cont)
         if cont==1:
-            st.write(i_str)
+            #st.write(i_str)
     exporter = JsonExporter(indent=2, sort_keys=True)
     st.json(exporter.export(listNodesObjets[2]))
