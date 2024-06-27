@@ -15,9 +15,6 @@ listNodesNames = []
 listNodesObjets = []
 grandParentNode = Node("GPP")
 
-listNodesObjets += [grandParentNode]
-listNodesNames += ["GPP"]
-
 if st.button('Read'):
     i = 0
     while i < len(x):
