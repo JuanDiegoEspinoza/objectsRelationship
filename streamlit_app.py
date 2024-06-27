@@ -16,6 +16,7 @@ listNodesObjets = []
 
 if st.button('Read'):
     i = 0
+    GPP = Node('GPP')
     while i < len(x):
         parentName = x.iloc[i]['ob1']
         childName = x.iloc[i]['ob2']
@@ -44,8 +45,7 @@ if st.button('Read'):
     for i in listNodesObjets:
         i_str = str(i)
         cont = i_str.count('/')
-        st.write(cont)
         if cont==1:
-            print(1)
+            i = Node(i, parent=GPP)
     exporter = JsonExporter(indent=2, sort_keys=True)
-    st.json(exporter.export(listNodesObjets[2]))
+    st.json(exporter.export(GPP))
