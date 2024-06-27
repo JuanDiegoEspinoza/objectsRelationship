@@ -61,5 +61,5 @@ if st.button('Read'):
     #exporter = DictExporter()
     #st.json(exporter.export(root))
 
-    UniqueDotExporter(root).to_picture("udo.png")
+    UniqueDotExporter(root).to_picture("udo")
 
