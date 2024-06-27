@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-from anytree import Node, RenderTree, render
+from anytree import Node, RenderTree, render.DoubleStyle
 from anytree.exporter import UniqueDotExporter
 from anytree import Node, render
 from anytree import AnyNode
@@ -48,6 +48,6 @@ if st.button('Read'):
 
     root = grandParentNode
    # exporter = JsonExporter(indent=2, sort_keys=True)
-    st.write(RenderTree(root, style=ContStyle))
+    st.write(RenderTree(root, style=DoubleStyle()))
     #st.json(exporter.export(root))
 
