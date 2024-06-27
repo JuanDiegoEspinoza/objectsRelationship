@@ -49,4 +49,4 @@ if st.button('Read'):
             i = Node(i, parent=GPP_Node)
 
     exporter = JsonExporter(indent=2, sort_keys=True)
-    st.json(exporter.export(listNodesObjets[2]))
+    st.json(exporter.export("V01_GPP_METRICS"))
