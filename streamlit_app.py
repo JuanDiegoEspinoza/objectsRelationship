@@ -47,3 +47,4 @@ if st.button('Read'):
         st.write(cont)
         if cont==1:
             st.write(i_str)
+    UniqueDotExporter(listNodesObjets[2]).to_picture("udo.png")
