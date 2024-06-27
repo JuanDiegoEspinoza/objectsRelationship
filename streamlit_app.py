@@ -6,6 +6,7 @@ from anytree.exporter import UniqueDotExporter
 from anytree import Node, render
 from anytree import AnyNode
 from anytree.exporter import JsonExporter
+from anytree.exporter import DictExporter
 
 
 uploadedFile = st.file_uploader("Choose file")
