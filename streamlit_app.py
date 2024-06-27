@@ -13,9 +13,9 @@ uploadedFile = st.file_uploader("Choose file")
 x = pd.read_csv(uploadedFile)
 listNodesNames = []
 listNodesObjets = []
-GPP_Node = Node("GPP")
+grandParentNode = Node("GPP")
 
-listNodesObjets += GPP_Node
+listNodesObjets += grandParentNode
 listNodesNames += "GPP"
 
 if st.button('Read'):
@@ -47,9 +47,9 @@ if st.button('Read'):
 
     for i in listNodesObjets:
         if i.is_root:
-            i.parent = GPP_Node
+            i.parent = grandParentNode
 
-    root = listNodesObjets[listNodesNames.index('GPP')]
+    root = listNodesObjets[listNodesNames.index("GPP")]
     exporter = JsonExporter(indent=2, sort_keys=True)
     st.write(exporter.export(root))
 
