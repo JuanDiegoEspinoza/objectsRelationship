@@ -48,5 +48,5 @@ if st.button('Read'):
 
     root = grandParentNode
     exporter = JsonExporter(indent=2, sort_keys=True)
-    st.write(exporter.export(root))
+    st.json(exporter.export(root))
 
