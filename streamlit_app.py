@@ -8,6 +8,7 @@ from anytree import AnyNode
 from anytree.exporter import JsonExporter
 from anytree.exporter import DictExporter
 
+
 def get_image_download_link(img, filename, text):
     buffered = BytesIO()
     img.save(buffered, format="JPEG")
@@ -57,9 +58,8 @@ if st.button('Read'):
     root = grandParentNode
    # exporter = JsonExporter(indent=2, sort_keys=True)
     #st.write(RenderTree(root, style=DoubleStyle()).by_attr())
-    exporter = DictExporter()
-    st.json(exporter.export(root))
+    #exporter = DictExporter()
+    #st.json(exporter.export(root))
 
-    result = Image.fromarray(original_image)
-    st.markdown(get_image_download_link(result,img_file.name,'Download '+img_file.name), unsafe_allow_html=True)
+    UniqueDotExporter(root).to_picture("udo.png")
 
