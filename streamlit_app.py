@@ -47,4 +47,5 @@ if st.button('Read'):
         st.write(cont)
         if cont==1:
             st.write(i_str)
-    st.image(UniqueDotExporter(listNodesObjets[2]).to_picture())
+    exporter = JsonExporter(indent=2, sort_keys=True)
+    st.json(exporter.export(listNodesObjets[2]))
