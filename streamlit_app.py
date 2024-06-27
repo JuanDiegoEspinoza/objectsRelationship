@@ -8,6 +8,13 @@ from anytree import AnyNode
 from anytree.exporter import JsonExporter
 from anytree.exporter import DictExporter
 
+def get_image_download_link(img, filename, text):
+    buffered = BytesIO()
+    img.save(buffered, format="JPEG")
+    img_str = base64.b64encode(buffered.getvalue()).decode()
+    href =  f'<a href="data:file/txt;base64,{img_str}" download="{filename}">{text}</a>'
+    return href
+
 
 uploadedFile = st.file_uploader("Choose file")
 
@@ -52,4 +59,7 @@ if st.button('Read'):
     #st.write(RenderTree(root, style=DoubleStyle()).by_attr())
     exporter = DictExporter()
     st.json(exporter.export(root))
+
+    result = Image.fromarray(original_image)
+    st.markdown(get_image_download_link(result,img_file.name,'Download '+img_file.name), unsafe_allow_html=True)
 
