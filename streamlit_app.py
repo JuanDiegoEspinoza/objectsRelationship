@@ -45,4 +45,4 @@ if st.button('Read'):
         cont = i.count('/')
         st.write(cont)
         if cont==1:
-            st.write(i"""listNodesObjets[listNodesNames.index('V01_CPT_RESULTS')]""")
+            st.write(i)
