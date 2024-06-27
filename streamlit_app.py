@@ -48,6 +48,6 @@ if st.button('Read'):
 
     root = grandParentNode
    # exporter = JsonExporter(indent=2, sort_keys=True)
-    st.write(RenderTree(root, style=DoubleStyle()))
+    st.write(RenderTree(root, style=DoubleStyle()).by_attr())
     #st.json(exporter.export(root))
 
