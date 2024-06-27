@@ -42,7 +42,8 @@ if st.button('Read'):
     #st.write(exporter.export(root))
 
     for i in listNodesObjets:
-        cont = i.count('/')
+        i_str = str(i)
+        cont = i_str.count('/')
         st.write(cont)
         if cont==1:
-            st.write(i)
+            st.write(i_str)
