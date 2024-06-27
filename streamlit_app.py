@@ -16,7 +16,7 @@ listNodesObjets = []
 GPP_Node = Node("GPP")
 
 listNodesObjets += GPP_Node
-listNodesNames += 'GPP'
+listNodesNames += "GPP"
 
 if st.button('Read'):
     i = 0
