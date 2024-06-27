@@ -13,10 +13,10 @@ uploadedFile = st.file_uploader("Choose file")
 x = pd.read_csv(uploadedFile)
 listNodesNames = []
 listNodesObjets = []
+GPP_Node = Node('GPP')
 
 if st.button('Read'):
     i = 0
-    GPP = Node('GPP')
     while i < len(x):
         parentName = x.iloc[i]['ob1']
         childName = x.iloc[i]['ob2']
@@ -46,6 +46,7 @@ if st.button('Read'):
         i_str = str(i)
         cont = i_str.count('/')
         if cont==1:
-            i = Node(i, parent=GPP)
+            i = Node(i, parent=GPP_Node)
+
     exporter = JsonExporter(indent=2, sort_keys=True)
-    st.json(exporter.export(GPP))
+    st.json(exporter.export(GPP_Node))
