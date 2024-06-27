@@ -40,4 +40,9 @@ if st.button('Read'):
     #root = listNodesObjets[listNodesNames.index('V01_CPT_RESULTS')]
     #exporter = JsonExporter(indent=2, sort_keys=True)
     #st.write(exporter.export(root))
-    st.write(listNodesObjets[listNodesNames.index('V01_CPT_RESULTS')])
+
+    for i in listNodesObjets:
+        cont = i.count('/')
+        st.write(cont)
+        if cont==1:
+            st.write(i"""listNodesObjets[listNodesNames.index('V01_CPT_RESULTS')]""")
