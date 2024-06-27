@@ -15,6 +15,9 @@ listNodesNames = []
 listNodesObjets = []
 GPP_Node = Node('GPP')
 
+listNodesObjets += GPP_Node
+listNodesNames += 'GPP'
+
 if st.button('Read'):
     i = 0
     while i < len(x):
@@ -42,6 +45,11 @@ if st.button('Read'):
     #exporter = JsonExporter(indent=2, sort_keys=True)
     #st.write(exporter.export(root))
 
-    i = "V01_GPP_METRICS"
-    if (i in listNodesNames):
-        st.write("Node exists")
+    for i in listNodesObjets:
+        if i.is_root:
+            i.parent = GPP_Node
+
+    root = listNodesObjets[listNodesNames.index('GPP')]
+    exporter = JsonExporter(indent=2, sort_keys=True)
+    st.write(exporter.export(root))
+
