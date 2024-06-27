@@ -19,23 +19,23 @@ if st.button('Read'):
     while i < len(x):
         parentName = x.iloc[i]['ob1']
         childName = x.iloc[i]['ob2']
+
+        newParentNode = Node(parentName)
         
         if(parentName in listNodesNames):
-            newParentNode = listNodesObjets[listNodesNames.index(parentName)]
-            parentFlag = 1
-        else: 
-            newParentNode = Node(parentName)
-            listNodesNames +=[parentName]
-            listNodesObjets+= [newParentNode]
+            newParentNode = listNodesObjets[listNodesNames.index(parentName)]       
+        
+        listNodesNames +=[parentName]
+        listNodesObjets +=[newParentNode]
 
+        newChildNode = Node(childName, parent=newParentNode)
 
         if(childName in listNodesNames):
             newChildNode = listNodesObjets[listNodesNames.index(childName)]
-            childFlag = 1
-        else:       
-            newChildNode = Node(childName, parent=newParentNode)
-            listNodesNames +=[childName]
-            listNodesObjets+= [newChildNode]
+
+        listNodesNames +=[childName]
+        listNodesObjets +=[newChildNode]
+
         i+=1
     #root = listNodesObjets[listNodesNames.index('V01_CPT_RESULTS')]
     #exporter = JsonExporter(indent=2, sort_keys=True)
